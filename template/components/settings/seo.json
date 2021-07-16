@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_settings_seos",
+  "info": {
+    "name": "seo",
+    "icon": "search-location",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "seo_meta_title": {
+      "type": "string"
+    },
+    "seo_meta_og_title": {
+      "type": "string"
+    },
+    "seo_meta_og_type": {
+      "type": "string"
+    },
+    "seo_meta_author": {
+      "type": "string"
+    },
+    "seo_meta_desc": {
+      "type": "text",
+      "maxLength": 160
+    },
+    "seo_meta_og_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": ["images"],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "seo_meta_og_video": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": ["videos"],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

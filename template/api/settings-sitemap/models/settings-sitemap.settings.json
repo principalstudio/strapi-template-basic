@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "settings_sitemaps",
+  "info": {
+    "name": "Settings / Sitemap",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "enabled": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

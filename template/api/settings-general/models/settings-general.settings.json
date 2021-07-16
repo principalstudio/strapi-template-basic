@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "settings_generals",
+  "info": {
+    "name": "Settings / General",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "meta": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "component",
+      "repeatable": false,
+      "component": "settings.seo"
+    },
+    "redirections": {
+      "type": "component",
+      "repeatable": true,
+      "component": "settings.redirection"
+    },
+    "robots_txt": {
+      "type": "text"
+    }
+  }
+}

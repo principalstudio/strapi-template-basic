@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_settings_redirections",
+  "info": {
+    "name": "redirection",
+    "icon": "arrow-circle-right"
+  },
+  "options": {},
+  "attributes": {
+    "source": {
+      "type": "string"
+    },
+    "destination": {
+      "type": "string"
+    }
+  }
+}

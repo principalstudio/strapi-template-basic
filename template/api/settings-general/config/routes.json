@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/settings-general",
+      "handler": "settings-general.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/settings-general",
+      "handler": "settings-general.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/settings-general",
+      "handler": "settings-general.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
