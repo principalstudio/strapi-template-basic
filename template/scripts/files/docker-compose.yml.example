@@ -1,5 +1,6 @@
-# TODO: Create a git repo and push all files/directories
+# TODO: Run merge script: `node scripts/merge.js`
 # TODO: Fill in placeholders in this file
+# TODO: Create a git repo and push all files/directories
 
 version: '3'
 services:

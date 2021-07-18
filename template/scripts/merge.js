@@ -31,17 +31,17 @@ module.exports = function merge() {
       oldPath: path.join(__dirname, 'files/config/env/production/database.js'),
       newPath: path.join(__dirname, '../config/env/production/database.js')
     },
-    {
-      oldPath: path.join(__dirname, 'files/extensions'),
-      newPath: path.join(__dirname, '../extensions')
-    },
+    // {
+    //   oldPath: path.join(__dirname, 'files/extensions'),
+    //   newPath: path.join(__dirname, '../extensions')
+    // },
     {
       oldPath: path.join(__dirname, 'files/.grenrc.yml'),
       newPath: path.join(__dirname, '../.grenrc.yml')
     },
     {
       oldPath: path.join(__dirname, 'files/docker-compose.yml.example'),
-      newPath: path.join(__dirname, '../docker-compose.yml.example')
+      newPath: path.join(__dirname, '../docker-compose.yml')
     },
     {
       oldPath: path.join(__dirname, 'files/Dockerfile'),
