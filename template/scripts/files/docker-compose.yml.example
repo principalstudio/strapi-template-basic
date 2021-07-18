@@ -6,7 +6,8 @@ services:
     restart: unless-stopped
     environment:
       NODE_ENV: production
-      URL: '<put strapi URL here>'
+      URL: '<put Strapi URL here>'
+      ADMIN_URL: '<put Strapi admin URL here>'
       DATABASE_CLIENT: postgres
       DATABASE_NAME: strapi
       DATABASE_HOST: <if running postgres in a container, put `postgres` here. Else put host machine IP here>

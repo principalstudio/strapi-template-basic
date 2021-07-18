@@ -12,6 +12,10 @@ module.exports = function merge() {
       newPath: path.join(__dirname, '../.github')
     },
     {
+      oldPath: path.join(__dirname, 'files/.dockerignore'),
+      newPath: path.join(__dirname, '../.dockerignore')
+    },
+    {
       oldPath: path.join(__dirname, 'files/config/middleware.js'),
       newPath: path.join(__dirname, '../config/middleware.js')
     },
@@ -20,8 +24,12 @@ module.exports = function merge() {
       newPath: path.join(__dirname, '../config/plugins.js')
     },
     {
-      oldPath: path.join(__dirname, 'files/config/server.js'),
-      newPath: path.join(__dirname, '../config/server.js.example')
+      oldPath: path.join(__dirname, 'files/config/env/production/server.js'),
+      newPath: path.join(__dirname, '../config/env/production/server.js')
+    },
+    {
+      oldPath: path.join(__dirname, 'files/config/env/production/database.js'),
+      newPath: path.join(__dirname, '../config/env/production/database.js')
     },
     {
       oldPath: path.join(__dirname, 'files/extensions'),
@@ -51,11 +59,6 @@ module.exports = function merge() {
     });
   });
 
-  fs.rmdir(__dirname, function(err) {
-    if (err) {
-      throw err;
-    } else {
-      console.log('scripts directory successfuly removed.');
-    }
-  });
+  // remove whole scripts directory
+  fs.rmdirSync(__dirname, { recursive: true });
 }();
