@@ -10,9 +10,6 @@ module.exports = function(scope) {
         'strapi-plugin-documentation': scope.strapiVersion,
         'strapi-provider-email-sendgrid': scope.strapiVersion,
       },
-      scripts: {
-        merge: 'if [ -d ./scripts/files ]; then node ./scripts/merge.js; fi'
-      }
     },
   };
 };
