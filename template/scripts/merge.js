@@ -49,6 +49,8 @@ module.exports = function merge() {
     },
   ];
 
+  fs.mkdirSync(path.join(__dirname, '../config/env/production'), { recursive: true });
+
   filesToMove.forEach((file) => {
     fs.rename(file.oldPath, file.newPath, (err) => {
       if (err) {

@@ -5,6 +5,6 @@ COPY ./package-lock.json ./
 RUN npm run install
 COPY . .
 ENV NODE_ENV production
-RUN nmp run build
+RUN npm run build
 EXPOSE 1337
-CMD ["npm", "run start"]
+CMD ["npm", "start"]
