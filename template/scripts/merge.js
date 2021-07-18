@@ -5,7 +5,7 @@ module.exports = function merge() {
   const filesToMove = [
     {
       oldPath: path.join(__dirname, 'files/.vscode'),
-      newPath: path.join(__dirname, '../.vscode')
+      newPath: path.join(__dirname, '../.test')
     }
   ];
 
