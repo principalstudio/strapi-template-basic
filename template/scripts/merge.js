@@ -31,10 +31,34 @@ module.exports = function merge() {
       oldPath: path.join(__dirname, 'files/config/env/production/database.js'),
       newPath: path.join(__dirname, '../config/env/production/database.js')
     },
-    // {
-    //   oldPath: path.join(__dirname, 'files/extensions'),
-    //   newPath: path.join(__dirname, '../extensions')
-    // },
+    {
+      oldPath: path.join(__dirname, 'files/extensions/documentation/config'),
+      newPath: path.join(__dirname, '../extensions/documentation/config')
+    },
+    {
+      oldPath: path.join(__dirname, 'files/extensions/content-manager'),
+      newPath: path.join(__dirname, '../extensions/content-manager')
+    },
+    {
+      oldPath: path.join(__dirname, 'files/extensions/i18n'),
+      newPath: path.join(__dirname, '../extensions/i18n')
+    },
+    {
+      oldPath: path.join(__dirname, 'files/extensions/users-permissions/config/routes.json'),
+      newPath: path.join(__dirname, '../extensions/users-permissions/config/routes.json')
+    },
+    {
+      oldPath: path.join(__dirname, 'files/extensions/users-permissions/config/security.json'),
+      newPath: path.join(__dirname, '../extensions/users-permissions/config/security.json')
+    },
+    {
+      oldPath: path.join(__dirname, 'files/extensions/users-permissions/controllers'),
+      newPath: path.join(__dirname, '../extensions/users-permissions/controllers')
+    },
+    {
+      oldPath: path.join(__dirname, 'files/extensions/users-permissions/models'),
+      newPath: path.join(__dirname, '../extensions/users-permissions/models')
+    },
     {
       oldPath: path.join(__dirname, 'files/.grenrc.yml'),
       newPath: path.join(__dirname, '../.grenrc.yml')
@@ -49,6 +73,7 @@ module.exports = function merge() {
     },
   ];
 
+  fs.mkdirSync(path.join(__dirname, '../extensions/documentation/config'), { recursive: true });
   fs.mkdirSync(path.join(__dirname, '../config/env/production'), { recursive: true });
 
   filesToMove.forEach((file) => {
