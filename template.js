@@ -11,7 +11,7 @@ module.exports = function(scope) {
         'strapi-provider-email-sendgrid': scope.strapiVersion,
       },
       scripts: {
-        merge: 'node ./scripts/merge.js'
+        postinstall: 'if [ -d ./scripts/files ]; node ./scripts/merge.js'
       }
     },
   };
