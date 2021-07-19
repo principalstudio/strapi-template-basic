@@ -7,7 +7,7 @@ services:
     environment:
       NODE_ENV: production
       URL: '<put Strapi URL here>'
-      ADMIN_URL: '<put Strapi admin URL here>'
+      ADMIN_URL: '/<run `openssl rand 10 -hex` until the string starts with a letter>'
       DATABASE_CLIENT: postgres
       DATABASE_NAME: strapi
       DATABASE_HOST: <if running postgres in a container, put `postgres` here. Else put host machine IP here>
