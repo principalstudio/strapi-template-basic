@@ -1,8 +1,12 @@
+# TODO: Fill in placeholders in this file
+# TODO: Run merge script: `node scripts/merge.js`
+# TODO: Create a git repo and push all files/directories
+
 name: Publish Docker image
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   publish_image:
     runs-on: ubuntu-latest

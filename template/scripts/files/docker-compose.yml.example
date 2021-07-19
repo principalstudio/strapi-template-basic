@@ -1,7 +1,3 @@
-# TODO: Run merge script: `node scripts/merge.js`
-# TODO: Fill in placeholders in this file
-# TODO: Create a git repo and push all files/directories
-
 version: '3'
 services:
   strapi:
@@ -35,9 +31,9 @@ services:
       - '<put container port here>:1337'
     command: 'bash -c "npm run strapi config:restore -f dump.json && npm start"'
 
-  # TODO: If you don't want to run a database in a container, comment out the following
-  #       Service and the `links` option above..
-  #       @see https://vsupalov.com/database-in-docker/
+  # If you don't want to run a database in a container, comment out the following
+  # Service and the `links` option above..
+  # @see https://vsupalov.com/database-in-docker/
   postgres:
     image: postgres
     container_name: <put database engine container name here>

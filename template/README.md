@@ -76,7 +76,7 @@ Repsonsive images are automatically generated when the _Enable responsive friend
 
 ### Deployment
 
-Example docker-compose files are provided in the _docker_ directory. To build and publish a docker image every time commits are pushed to master, rename _.github/workflows/publish-image.yml.off_ -> _.github/workflows/publish-image.yml_.
+Example docker-compose files are provided in the _docker_ directory. To build and publish a docker image every time commits are pushed to main, rename _.github/workflows/publish-image.yml.off_ -> _.github/workflows/publish-image.yml_.
 
 For more info on Strapi docker images see [https://github.com/strapi/strapi-docker](https://github.com/strapi/strapi-docker).
 
