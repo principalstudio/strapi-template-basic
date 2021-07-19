@@ -26,10 +26,10 @@ services:
     links:
       - postgres:postgres
     volumes:
-      - ./<put mounted uploads directory here>:/usr/src/app/public/uploads
+      - ./public/uploads:/usr/src/app/public/uploads
     ports:
       - '<put container port here>:1337'
-    command: 'bash -c "npm run strapi config:restore -f dump.json && npm start"'
+    command: 'bash -c "npm run strapi config:restore -- -f dump.json && npm start"'
 
   # If you don't want to run a database in a container, comment out the following
   # Service and the `links` option above..
