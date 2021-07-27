@@ -5,7 +5,8 @@ module.exports = function(scope) {
         'principal-strapi-template-basic-version': '1.1.0'
       },
       dependencies: {
-        'strapi-middleware-cache': '1.5.0',
+        'slugify': 'latest',
+        'strapi-middleware-cache': 'latest',
         'strapi-plugin-graphql': scope.strapiVersion,
         'strapi-plugin-documentation': scope.strapiVersion,
         'strapi-provider-email-sendgrid': scope.strapiVersion,
