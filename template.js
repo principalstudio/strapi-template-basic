@@ -2,7 +2,7 @@ module.exports = function(scope) {
   return {
     package: {
       config: {
-        'principal-strapi-template-basic-version': '1.0.0'
+        'principal-strapi-template-basic-version': '1.1.0'
       },
       dependencies: {
         'strapi-middleware-cache': '1.5.0',
