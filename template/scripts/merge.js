@@ -56,8 +56,8 @@ module.exports = function merge() {
       newPath: path.join(__dirname, '../extensions/users-permissions/controllers')
     },
     {
-      oldPath: path.join(__dirname, 'files/extensions/users-permissions/models'),
-      newPath: path.join(__dirname, '../extensions/users-permissions/models')
+      oldPath: path.join(__dirname, 'files/middlewares'),
+      newPath: path.join(__dirname, '../middlewares')
     },
     {
       oldPath: path.join(__dirname, 'files/.grenrc.yml'),

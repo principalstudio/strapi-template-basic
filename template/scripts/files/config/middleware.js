@@ -1,4 +1,8 @@
 module.exports = ({ env }) => ({
+  load: {
+    before: ['responseTime', 'logger', 'cors', 'responses', 'gzip'],
+    after: ['parser', 'cache', 'sync-i18n-relations', 'router'],
+  },
   settings: {
     cache: {
       enabled: env('CACHE_ENABLED') == 1 ? true : false,
@@ -18,6 +22,11 @@ module.exports = ({ env }) => ({
       maxAge: parseInt(env('CACHE_MAX_AGE')),
       logs: env('CACHE_LOGS') == 1 ? true : false,
       redisConfig: env('CACHE_REDIS_CONFIG') ? JSON.parse(env('CACHE_REDIS_CONFIG')) : {},
+    },
+    // TODO: add all models with relations to sync
+    'sync-i18n-relations': {
+      enabled: true,
+      models: ['page'],
     },
   },
 });
