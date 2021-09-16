@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.2.1 (16/09/2021)
+
+#### Fixes
+
+-  Move LICENCE.txt file in files directory to avoid create-strapi-app error [#9](https://github.com/principalstudio/strapi-template-basic/issues/9)
+
+---
+
 ## v1.2.0 (16/09/2021)
 
 #### Features
