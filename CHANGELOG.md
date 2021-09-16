@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.2.3 (16/09/2021)
+
+#### Fixes
+
+-  Use `npm ci` in Dockerfile [#13](https://github.com/principalstudio/strapi-template-basic/issues/13)
+
+---
+
 ## v1.2.2 (16/09/2021)
 
 #### Features
