@@ -2,7 +2,7 @@ module.exports = function(scope) {
   return {
     package: {
       config: {
-        'principal-strapi-template-basic-version': '1.2.2'
+        'principal-strapi-template-basic-version': '1.2.3'
       },
       dependencies: {
         'slugify': 'latest',
