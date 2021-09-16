@@ -2,7 +2,7 @@ FROM strapi/base
 WORKDIR /usr/src/app
 COPY ./package.json ./
 COPY ./package-lock.json ./
-RUN npm run install
+RUN npm ci
 COPY . .
 ENV NODE_ENV production
 RUN npm run build
