@@ -71,6 +71,10 @@ module.exports = function merge() {
       oldPath: path.join(__dirname, 'files/Dockerfile'),
       newPath: path.join(__dirname, '../Dockerfile')
     },
+    {
+      oldPath: path.join(__dirname, 'files/LICENCE.txt'),
+      newPath: path.join(__dirname, '../LICENCE.txt')
+    },
   ];
 
   fs.mkdirSync(path.join(__dirname, '../extensions/documentation/config'), { recursive: true });
