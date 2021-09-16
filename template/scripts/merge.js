@@ -1,9 +1,6 @@
 const path = require('path');
 const fs = require('fs');
 
-// TODO: run this script after init
-// node scripts/merge.js
-
 module.exports = function merge() {
   const filesToMove = [
     {

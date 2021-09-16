@@ -1,5 +1,6 @@
 # TODO: Fill in placeholders in this file
 # TODO: Run merge script: `node scripts/merge.js`
+# TODO: Add `quote_type = single` to [*] section in .editorgonfig file
 # TODO: Create a git repo and push all files/directories
 
 name: Publish Docker image
