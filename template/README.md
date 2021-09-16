@@ -33,6 +33,7 @@ Strapi API/CMS for [project name]
 ### TODOs
 
 There are TODOs across the files in this project. Make sure to follow instructions in each of them and delete the TODO once it has been applied.
+
 ### Strapi documentation and guides
 
 Refer to the [Strapi documentation](https://strapi.io/documentation/v3.x/getting-started/introduction.html) to setup, configure and deploy the Strapi app.
