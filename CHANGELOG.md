@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.2.2 (16/09/2021)
+
+#### Features
+
+- [**documentation**] Add directives to merge script [#11](https://github.com/principalstudio/strapi-template-basic/issues/11)
+
+---
+
 ## v1.2.1 (16/09/2021)
 
 #### Fixes
