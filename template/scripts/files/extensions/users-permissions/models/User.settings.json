@@ -52,6 +52,14 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false
+    },
+    "recovery_code": {
+      "type": "string",
+      "private": true
+    },
+    "recovery_email": {
+      "type": "string",
+      "private": true
     }
   }
 }
