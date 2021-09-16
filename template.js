@@ -7,6 +7,7 @@ module.exports = function(scope) {
       dependencies: {
         'slugify': 'latest',
         'strapi-middleware-cache': 'latest',
+        'randomstring': 'latest',
         'strapi-plugin-graphql': scope.strapiVersion,
         'strapi-plugin-documentation': scope.strapiVersion,
         'strapi-provider-email-sendgrid': scope.strapiVersion,
