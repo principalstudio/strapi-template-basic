@@ -2,9 +2,10 @@ module.exports = function(scope) {
   return {
     package: {
       config: {
-        'principal-strapi-template-basic-version': '1.2.3'
+        'principal-strapi-template-basic-version': '1.2.4'
       },
       dependencies: {
+        'pg': 'latest',
         'slugify': 'latest',
         'strapi-middleware-cache': 'latest',
         'randomstring': 'latest',
