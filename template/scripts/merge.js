@@ -16,6 +16,10 @@ module.exports = function merge() {
       newPath: path.join(__dirname, '../.dockerignore')
     },
     {
+      oldPath: path.join(__dirname, 'files/dump.json'),
+      newPath: path.join(__dirname, '../dump.json')
+    },
+    {
       oldPath: path.join(__dirname, 'files/config/middleware.js'),
       newPath: path.join(__dirname, '../config/middleware.js')
     },
