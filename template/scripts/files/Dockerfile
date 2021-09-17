@@ -7,4 +7,4 @@ COPY . .
 ENV NODE_ENV production
 RUN npm run build
 EXPOSE 1337
-CMD ["npm", "start"]
+CMD bash -c "npm run strapi config:restore -- -f dump.json && npm start"

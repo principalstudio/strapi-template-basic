@@ -64,10 +64,6 @@ module.exports = function merge() {
       newPath: path.join(__dirname, '../.grenrc.yml')
     },
     {
-      oldPath: path.join(__dirname, 'files/docker-compose.yml.example'),
-      newPath: path.join(__dirname, '../docker-compose.yml.example')
-    },
-    {
       oldPath: path.join(__dirname, 'files/Dockerfile'),
       newPath: path.join(__dirname, '../Dockerfile')
     },
