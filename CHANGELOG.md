@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.2.4 (17/09/2021)
+
+#### Features
+
+-  Add postgres dependency [#15](https://github.com/principalstudio/strapi-template-basic/issues/15)
+
+---
+
 ## v1.2.3 (16/09/2021)
 
 #### Fixes
