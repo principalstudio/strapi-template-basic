@@ -1,3 +1,7 @@
+// TODO: Run merge script: `node scripts/merge.js`
+// TODO: Create a git repo and push all files/directories
+// TODO: Update documentation config in extensions/documentation/config/settings.json
+
 module.exports = function(scope) {
   return {
     package: {
@@ -11,7 +15,7 @@ module.exports = function(scope) {
         'randomstring': 'latest',
         'strapi-plugin-graphql': scope.strapiVersion,
         'strapi-plugin-documentation': scope.strapiVersion,
-        'strapi-provider-email-sendgrid': scope.strapiVersion,
+        'strapi-provider-email-amazon-ses': scope.strapiVersion,
       },
     },
   };
