@@ -16,6 +16,7 @@ module.exports = function(scope) {
         'strapi-plugin-graphql': scope.strapiVersion,
         'strapi-plugin-documentation': scope.strapiVersion,
         'strapi-provider-email-amazon-ses': scope.strapiVersion,
+        'strapi-provider-upload-aws-s3': scope.strapiVersion,
       },
     },
   };
