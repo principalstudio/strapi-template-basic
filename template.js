@@ -1,12 +1,8 @@
-// TODO: Run merge script: `node scripts/merge.js`
-// TODO: Create a git repo and push all files/directories
-// TODO: Update documentation config in extensions/documentation/config/settings.json
-
 module.exports = function(scope) {
   return {
     package: {
       config: {
-        'principal-strapi-template-basic-version': '1.2.4'
+        'principal-strapi-template-basic-version': '2.0.0'
       },
       dependencies: {
         'pg': 'latest',
