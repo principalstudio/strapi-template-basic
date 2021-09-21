@@ -1,3 +1,5 @@
+// TODO: Edit or delete this file
+
 export const SELECT_OPTIONS = [
   { id: 'components.Wysiwyg.selectOptions.title', value: '' },
   // { id: 'components.Wysiwyg.selectOptions.H1', value: '#' },
@@ -84,14 +86,14 @@ export const CONTROLS = [
       handler: 'addContent',
       text: '[textToReplace](link)',
     },
-    // {
-    //   label: 'quotes',
-    //   style: 'BLOCKQUOTE',
-    //   className: 'quote',
-    //   hideLabel: true,
-    //   handler: 'addSimpleBlockWithSelection',
-    //   text: '> textToReplace',
-    // },
+    {
+      label: 'quotes',
+      style: 'BLOCKQUOTE',
+      className: 'quote',
+      hideLabel: true,
+      handler: 'addSimpleBlockWithSelection',
+      text: '> textToReplace',
+    },
   ],
 ];
 

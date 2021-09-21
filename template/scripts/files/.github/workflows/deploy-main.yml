@@ -1,0 +1,90 @@
+on:
+  push:
+    branches:
+      - main
+
+name: Deploy main branch to AWS Elastic Beanstalk
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2
+
+      - name: Create GitHub deployment
+        uses: maxkomarychev/oction-create-deployment@v0.7.1
+        id: create_gh_deployment
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          ref: ${{github.sha}}
+          environment: development
+          required_contexts: <<EMPTY>>
+
+      - name: Mark GitHub deployment as pending
+        uses: maxkomarychev/oction-create-deployment-status@v0.7.1
+        id: create_gh_deployment_status_pending
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          deployment_id: ${{ steps.create_gh_deployment.outputs.id }}
+          state: pending
+
+      - name: Write .env file from AWS Secrets Manager secret
+        uses: say8425/aws-secrets-manager-actions@v2
+        with:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ca-central-1
+          SECRET_NAME: TODO: add AWS secret name here
+          OUTPUT_PATH: .env
+
+      - name: Set vars
+        run: |
+          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+          echo '::set-output name=url::https://${{ env.AWS_REGION }}.console.aws.amazon.com/elasticbeanstalk/home?region=${{ env.AWS_REGION }}#/environment/dashboard?applicationName=${{ env.AWS_EB_APP_NAME }}&environmentId=${{ env.AWS_EB_ENV_ID }}'
+        id: set_vars
+
+      - name: Generate deployment package
+        run: zip -r deploy.zip . -x '*.git*'
+
+      - name: Mark GitHub deployment as in_progress
+        uses: maxkomarychev/oction-create-deployment-status@v0.7.1
+        id: create_gh_deployment_status_in_progress
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          deployment_id: ${{ steps.create_gh_deployment.outputs.id }}
+          state: in_progress
+          target_url: ${{ steps.set_vars.outputs.url }}
+
+      - name: Deploy
+        uses: einaregilsson/beanstalk-deploy@v18
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          application_name: ${{ env.AWS_EB_APP_NAME }}
+          environment_name: ${{ env.AWS_EB_ENV_NAME }}
+          version_label: github-action-deploy-main-${{ steps.set_vars.outputs.sha_short }}-${{github.run_number}}
+          region: ${{ env.AWS_REGION }}
+          deployment_package: deploy.zip
+
+      - name: Mark GitHub deployment as success
+        uses: maxkomarychev/oction-create-deployment-status@v0.7.1
+        id: create_gh_deployment_status_success
+        if: ${{ success() }}
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          deployment_id: ${{ steps.create_gh_deployment.outputs.id }}
+          state: success
+          target_url: ${{ steps.set_vars.outputs.url }}
+          environment_url: ${{ env.URL }}
+          auto_inactive: true
+
+      - name: Mark GitHub deployment as failure
+        uses: maxkomarychev/oction-create-deployment-status@v0.7.1
+        id: create_gh_deployment_status_failure
+        if: ${{ failure() }}
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          deployment_id: ${{ steps.create_gh_deployment.outputs.id }}
+          state: failure
+          target_url: ${{ steps.set_vars.outputs.url }}

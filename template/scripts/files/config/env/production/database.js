@@ -5,11 +5,11 @@ module.exports = ({ env }) => ({
       connector: 'bookshelf',
       settings: {
         client: 'postgres',
-        host: env('DATABASE_HOST', 'postgres'),
-        port: env.int('DATABASE_PORT', 5432),
-        database: env('DATABASE_NAME'),
-        username: env('DATABASE_USERNAME'),
-        password: env('DATABASE_PASSWORD'),
+        host: env('DATABASE_HOST', process.env.RDS_HOSTNAME),
+        port: env.int('DATABASE_PORT', process.env.RDS_PORT),
+        database: env('DATABASE_NAME', process.env.RDS_DB_NAME),
+        username: env('DATABASE_USERNAME', process.env.RDS_USERNAME),
+        password: env('DATABASE_PASSWORD', process.env.RDS_PASSWORD),
         ssl: env.bool('DATABASE_SSL', false),
       },
       options: {
@@ -19,8 +19,8 @@ module.exports = ({ env }) => ({
           idleTimeoutMillis: 30000,
           createTimeoutMillis: 30000,
           acquireTimeoutMillis: 30000,
-        }
-      }
+        },
+      },
     },
   },
 });

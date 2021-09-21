@@ -8,8 +8,16 @@ module.exports = function merge() {
       newPath: path.join(__dirname, '../.vscode')
     },
     {
+      oldPath: path.join(__dirname, 'files/setup.todo'),
+      newPath: path.join(__dirname, '../setup.todo')
+    },
+    {
       oldPath: path.join(__dirname, 'files/.github'),
       newPath: path.join(__dirname, '../.github')
+    },
+    {
+      oldPath: path.join(__dirname, 'files/.ebextensions'),
+      newPath: path.join(__dirname, '../.ebextensions')
     },
     {
       oldPath: path.join(__dirname, 'files/.dockerignore'),
@@ -30,6 +38,10 @@ module.exports = function merge() {
     {
       oldPath: path.join(__dirname, 'files/config/env/production/server.js'),
       newPath: path.join(__dirname, '../config/env/production/server.js')
+    },
+    {
+      oldPath: path.join(__dirname, 'files/config/env/production/plugins.js'),
+      newPath: path.join(__dirname, '../config/env/production/plugins.js')
     },
     {
       oldPath: path.join(__dirname, 'files/config/env/production/database.js'),
@@ -60,8 +72,16 @@ module.exports = function merge() {
       newPath: path.join(__dirname, '../extensions/users-permissions/controllers')
     },
     {
+      oldPath: path.join(__dirname, 'files/extensions/users-permissions/models'),
+      newPath: path.join(__dirname, '../extensions/users-permissions/models')
+    },
+    {
       oldPath: path.join(__dirname, 'files/middlewares'),
       newPath: path.join(__dirname, '../middlewares')
+    },
+    {
+      oldPath: path.join(__dirname, 'files/.env.example'),
+      newPath: path.join(__dirname, '../.env.example')
     },
     {
       oldPath: path.join(__dirname, 'files/.grenrc.yml'),
