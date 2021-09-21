@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.0.0 (21/09/2021)
+
+#### Features
+
+-  Add AWS Elastic Beanstalk deployment scheme, support for AWS SES and S3 and various improvements [#1](https://github.com/principalstudio/strapi-template-basic/issues/1)
+
+---
+
 ## v1.2.4 (17/09/2021)
 
 #### Features
