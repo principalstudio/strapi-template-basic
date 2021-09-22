@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.1.0 (22/09/2021)
+
+#### Features
+
+-  Add fields/link component [#23](https://github.com/principalstudio/strapi-template-basic/issues/23)
+
+---
+
 ## v2.0.0 (21/09/2021)
 
 #### Features
