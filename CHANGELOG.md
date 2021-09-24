@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.1.1 (24/09/2021)
+
+#### Features
+
+-  Change AWS eb version label format in deploy-main workflow [#25](https://github.com/principalstudio/strapi-template-basic/issues/25)
+
+---
+
 ## v2.1.0 (22/09/2021)
 
 #### Features
