@@ -40,6 +40,7 @@ jobs:
 
       - name: Set vars
         run: |
+          echo "::set-output name=datetime::$(date +'%Y%m%d%k%M%S')"
           echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
           echo '::set-output name=url::https://${{ env.AWS_REGION }}.console.aws.amazon.com/elasticbeanstalk/home?region=${{ env.AWS_REGION }}#/environment/dashboard?applicationName=${{ env.AWS_EB_APP_NAME }}&environmentId=${{ env.AWS_EB_ENV_ID }}'
         id: set_vars
@@ -63,7 +64,7 @@ jobs:
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           application_name: ${{ env.AWS_EB_APP_NAME }}
           environment_name: ${{ env.AWS_EB_ENV_NAME }}
-          version_label: github-action-deploy-main-${{ steps.set_vars.outputs.sha_short }}-${{github.run_number}}
+          version_label: github-action-${{github.job}}-${{ steps.set_vars.outputs.sha_short }}-${{ steps.set_vars.outputs.datetime }}
           region: ${{ env.AWS_REGION }}
           deployment_package: deploy.zip
 
