@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.2.0 (28/09/2021)
+
+#### Features
+
+-  Handle duplicate slugs in functions/override-slug [#27](https://github.com/principalstudio/strapi-template-basic/issues/27)
+
+---
+
 ## v2.1.1 (24/09/2021)
 
 #### Features
