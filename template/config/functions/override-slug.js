@@ -32,11 +32,12 @@ module.exports = async (
   const isPublishing =
     data.hasOwnProperty('published_at') && Object.keys(data).length === 1;
 
-  // bail if entity is being puclished or unpublished
-  if (isPublishing) return;
+  // bail if entity is being published or unpublished
+  if (isPublishing) return data;
 
   const id = params && params.id ? params.id : data.id;
   const toSlugify = sourceStr ? sourceStr : data.title;
+
   let slug = slugify(toSlugify, {
     lower: true,
     strict: true,
@@ -59,4 +60,6 @@ module.exports = async (
   }
 
   data.slug = slug;
+
+  return data;
 };
