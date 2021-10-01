@@ -1,14 +1,14 @@
 module.exports = ({ env }) => ({
-  // TODO: Remove/edit depending on needs
-  // upload: {
-  //   breakpoints: {
-  //     xlarge: 1920,
-  //     large: 1280,
-  //     medium: 1024,
-  //     small: 600,
-  //     xsmall: 300
-  //   }
-  // },
+  // TODO: Eedit depending on needs. To disable breakpoints, use null as its value
+  upload: {
+    breakpoints: {
+      xlarge: 1920,
+      large: 1280,
+      medium: 1024,
+      small: 600,
+      xsmall: 300
+    }
+  },
   email: {
     provider: 'amazon-ses',
     providerOptions: {
