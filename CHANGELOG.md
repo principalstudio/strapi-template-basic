@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.2.1 (05/10/2021)
+
+#### Features
+
+-  Add prettier config file [#29](https://github.com/principalstudio/strapi-template-basic/issues/29)
+
+---
+
 ## v2.2.0 (28/09/2021)
 
 #### Features
