@@ -20,6 +20,10 @@ module.exports = function merge() {
       newPath: path.join(__dirname, '../.ebextensions')
     },
     {
+      oldPath: path.join(__dirname, 'files/.prettierrc.js'),
+      newPath: path.join(__dirname, '../.prettierrc.js')
+    },
+    {
       oldPath: path.join(__dirname, 'files/.dockerignore'),
       newPath: path.join(__dirname, '../.dockerignore')
     },
