@@ -22,27 +22,28 @@ const slugify = require('slugify');
  * @param {?String} sourceStr String to slugify, if null data.title is used
  * @param {?String} extraFieldKey Key of an extra field to be set with value to be slugified
  */
-module.exports = async (
-  data,
-  model,
-  params = null,
-  sourceStr = null,
-  extraFieldKey = null
-) => {
-  const isPublishing =
-    data.hasOwnProperty('published_at') && Object.keys(data).length === 1;
+module.exports = async (data, model, params = null, sourceStr = null, extraFieldKey = null) => {
+  const isPublishing = data.hasOwnProperty('published_at') && Object.keys(data).length === 1;
+  const toSlugify = sourceStr ? sourceStr : data.title;
 
   // bail if entity is being published or unpublished
-  if (isPublishing) return data;
+  if (isPublishing || !toSlugify) return data;
 
   const id = params && params.id ? params.id : data.id;
-  const toSlugify = sourceStr ? sourceStr : data.title;
+  let locale;
+
+  if (data.locale) {
+    locale = data.locale;
+  } else {
+    const entity = await strapi.query(model).findOne({ id });
+    locale = entity.locale;
+  }
 
   let slug = slugify(toSlugify, {
     lower: true,
     strict: true,
   });
-  const countParams = { slug };
+  const countParams = { slug, _locale: locale };
 
   if (id) {
     countParams.id_nin = [id];
