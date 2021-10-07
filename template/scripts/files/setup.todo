@@ -1,22 +1,22 @@
-- [] Run merge script: `node scripts/merge.js`
-- [] Edit package.json file
-- [] Edit README.md file
-- [] Add this line `quote_type = single` to .editorconfig
-- [] Add this line `watchIgnoreFiles: ['**/*.todo', '**/*.paw'],` to `admin` in config/server.js
-- [] Create a git repo and push all files/directories
-- [] Add AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY secrets to the repo
-- [] Update documentation config in extensions/documentation/config/settings.json
-- [] Create S3 bucket for uploads plugin
-     https://strapi.io/documentation/developer-docs/latest/setup-deployment-guides/deployment/hosting-guides/amazon-aws.html#configure-s3-for-image-hosting
-- [] Create IAM policies for S3 Bucket and Secrets Manager
-- [] Create IAM bot user with aforementioned policies and BeanstalkBots group attached
-- [] Create AWS secret with needed environment vars (base on an existing BeanstalkBots user)
-- [] Create .ebignore file from .gitignore file, remove rule that disallows .env file
-- [] Run `eb init` and `eb create -db` commands
-- [] Add A record for custom domain name that routes traffic to EB load balancer
-- [] Create CM certificate for custom domain
-- [] Add 443 listener to EB load balancer using CM certificate created above
-     https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https.html
-- [] Redirect traffic from HTTP to HTTPS on EC2 load balancer
-     https://aws.amazon.com/premiumsupport/knowledge-center/elb-redirect-http-to-https-using-alb/
-- [] delete this file
+[] Run merge script: `node scripts/merge.js`
+[] Edit package.json file
+[] Edit README.md file
+[] Add this line `quote_type = single` to .editorconfig
+[] Add this line `watchIgnoreFiles: ['**/*.todo', '**/*.paw'],` to `admin` in config/server.js
+[] Create a git repo and push all files/directories
+[] Add AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY secrets to the repo
+[] Update documentation config in extensions/documentation/config/settings.json
+[] Create S3 bucket for uploads plugin
+   https://strapi.io/documentation/developer-docs/latest/setup-deployment-guides/deployment/hosting-guides/amazon-aws.html#configure-s3-for-image-hosting
+[] Create IAM policies for S3 Bucket and Secrets Manager
+[] Create IAM bot user with aforementioned policies and BeanstalkBots group attached
+[] Create AWS secret with needed environment vars (base on an existing BeanstalkBots user)
+[] Create .ebignore file from .gitignore file, remove rule that disallows .env file
+[] Run `eb init` and `eb create -db` commands
+[] Add A record for custom domain name that routes traffic to EB load balancer
+[] Create CM certificate for custom domain
+[] Add 443 listener to EB load balancer using CM certificate created above
+   https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https.html
+[] Redirect traffic from HTTP to HTTPS on EC2 load balancer
+   https://aws.amazon.com/premiumsupport/knowledge-center/elb-redirect-http-to-https-using-alb/
+[] delete this file
