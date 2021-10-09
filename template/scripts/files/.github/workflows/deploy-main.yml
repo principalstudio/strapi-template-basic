@@ -32,8 +32,8 @@ jobs:
       - name: Write .env file from AWS Secrets Manager secret
         uses: say8425/aws-secrets-manager-actions@v2
         with:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_DEV }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_DEV }}
           AWS_DEFAULT_REGION: ca-central-1
           SECRET_NAME: TODO: add AWS secret name here
           OUTPUT_PATH: .env
@@ -60,8 +60,8 @@ jobs:
       - name: Deploy
         uses: einaregilsson/beanstalk-deploy@v18
         with:
-          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID_DEV }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY_DEV }}
           application_name: ${{ env.AWS_EB_APP_NAME }}
           environment_name: ${{ env.AWS_EB_ENV_NAME }}
           version_label: github-action-${{github.job}}-${{ steps.set_vars.outputs.sha_short }}-${{ steps.set_vars.outputs.datetime }}
