@@ -1,5 +1,5 @@
 module.exports = ({ env }) => ({
-  // TODO: Eedit depending on needs. To disable breakpoints, use null as its value
+  // TODO: Eedit depending on needs. To disable breakpoints, use {} as its value
   upload: {
     breakpoints: {
       xlarge: 1920,
