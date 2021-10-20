@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.2.2 (20/10/2021)
+
+#### Features
+
+- [**documentation**] Remove outdated info from README file [#32](https://github.com/principalstudio/strapi-template-basic/issues/32)
+
+---
+
 ## v2.2.1 (05/10/2021)
 
 #### Features
