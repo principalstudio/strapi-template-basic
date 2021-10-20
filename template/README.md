@@ -17,7 +17,7 @@ Refer to the [Strapi documentation](https://strapi.io/documentation/v3.x/getting
 
 ### Conventional field naming
 
-Dynamic zones containing layouts components should be named using this pattern `body_{langcode}`. Same for titles (`title_{langcode}`) and page headers (`page_header_{langcode}`). SEO fields for content type entries should use the _seo_ component with the name `meta`.
+Dynamic zones containing layouts components should be named `body`. SEO fields for content type entries should use the _seo_ component with the name `meta`.
 
 ### Permissions and content type / component views
 
