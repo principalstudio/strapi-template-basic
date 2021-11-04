@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.3.0 (04/11/2021)
+
+#### Features
+
+-  Add abaility to filter which fields to sync for a model in sync-i18n-relations middleware [#35](https://github.com/principalstudio/strapi-template-basic/issues/35)
+
+---
+
 ## v2.2.2 (20/10/2021)
 
 #### Features
