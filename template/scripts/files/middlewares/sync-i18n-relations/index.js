@@ -5,16 +5,6 @@ const PLUGIN_NAME = 'sync-i18n-relations';
 /**
  * Creates the i18n relations syncing middleware for strapi
  *
- * Usage: in config/middleware.js file
- *
- * settings: {
- *   ...
- *   'sync-i18n-relations': {
- *     enabled: true,
- *     models: ['page', { name: 'page': fields: [ 'related_pages' ] }],
- *   },
- * }
- *
  * @param {Strapi} strapi
  */
 const Sync = (strapi) => {
@@ -93,7 +83,7 @@ const Sync = (strapi) => {
         const { body } = request;
         const modelsToSyncFlat = modelsToSync.map((x) => x.name || x);
         const modelOptions = modelsToSync.filter((x) => x.name === modelName);
-        const modelFieldsToSync = modelOptions ? _.first(modelOptions).fields : [];
+        const modelFieldsToSync = _.first(modelOptions)?.fields ? _.first(modelOptions).fields : [];
 
         await next();
 
