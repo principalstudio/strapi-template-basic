@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.3.1 (15/11/2021)
+
+#### Features
+
+-  Add option to disable slug override in override-slug config function [#37](https://github.com/principalstudio/strapi-template-basic/issues/37)
+
+---
+
 ## v2.3.0 (04/11/2021)
 
 #### Features
