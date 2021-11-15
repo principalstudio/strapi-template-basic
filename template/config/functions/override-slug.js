@@ -24,7 +24,13 @@ const slugify = require('slugify');
  */
 module.exports = async (data, model, params = null, sourceStr = null, extraFieldKey = null) => {
   const isPublishing = data.hasOwnProperty('published_at') && Object.keys(data).length === 1;
-  const toSlugify = sourceStr ? sourceStr : data.title;
+  let toSlugify;
+
+  if (data.disable_auto_slug && data.slug) {
+    toSlugify = data.slug;
+  } else {
+    toSlugify = sourceStr ? sourceStr : data.title;
+  }
 
   // bail if entity is being published or unpublished
   if (isPublishing || !toSlugify) return data;
