@@ -41,18 +41,25 @@ module.exports = async (data, model, params = null, sourceStr = null, extraField
   if (data.locale) {
     locale = data.locale;
   } else {
-    const entity = await strapi.query(model).findOne({ id });
-    locale = entity.locale;
+    const entity = id ? await strapi.query(model).findOne({ id }) : null;
+
+    if (entity) {
+      locale = entity.locale;
+    }
   }
 
   let slug = slugify(toSlugify, {
     lower: true,
     strict: true,
   });
-  const countParams = { slug, _locale: locale };
+  const countParams = { slug };
 
   if (id) {
     countParams.id_nin = [id];
+  }
+
+  if (locale) {
+    countParams._locale = locale;
   }
 
   const slugCount = await strapi.query(model).count(countParams);
