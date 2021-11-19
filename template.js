@@ -2,7 +2,7 @@ module.exports = function(scope) {
   return {
     package: {
       config: {
-        'principal-strapi-template-basic-version': '2.3.1'
+        'principal-strapi-template-basic-version': '2.3.2'
       },
       dependencies: {
         'pg': 'latest',
