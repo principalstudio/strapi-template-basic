@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.3.2 (19/11/2021)
+
+#### Fixes
+
+-  Fix override-slug function not working in single locale context [#39](https://github.com/principalstudio/strapi-template-basic/issues/39)
+
+---
+
 ## v2.3.1 (15/11/2021)
 
 #### Features
