@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.3.3 (25/11/2021)
+
+#### Features
+
+-  Add regex to URL field [#41](https://github.com/principalstudio/strapi-template-basic/issues/41)
+
+---
+
 ## v2.3.2 (19/11/2021)
 
 #### Fixes
