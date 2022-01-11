@@ -8,6 +8,7 @@ module.exports = function(scope) {
         'pg': 'latest',
         'slugify': 'latest',
         'strapi-middleware-cache': 'latest',
+        'strapi-plugin-preview-content': 'latest',
         'randomstring': 'latest',
         'strapi-plugin-graphql': scope.strapiVersion,
         'strapi-plugin-documentation': scope.strapiVersion,
