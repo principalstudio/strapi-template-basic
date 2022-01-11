@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.4.0 (11/01/2022)
+
+#### Features
+
+-  Add content preview fonctionality [#46](https://github.com/principalstudio/strapi-template-basic/issues/46)
+
+---
+
 ## v2.3.3 (25/11/2021)
 
 #### Features
